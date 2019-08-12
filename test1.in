@@ -1,0 +1,6 @@
+begin
+   call display "Hello, world!" $
+   call newline $
+end
+
+

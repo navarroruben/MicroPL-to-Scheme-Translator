@@ -1,0 +1,43 @@
+Micro-PL grammar
+----------------
+
+/* All uppercase words are tokens. */
+
+prog : stmts
+     ;
+
+stmts : 
+      | stmts stmt
+      ;
+
+block : BEGIN stmts END
+      ;
+
+stmt : DECLARE dcls stmt
+     | block
+     | IF expr THEN stmt ELSE stmt
+     | SET ID '=' expr
+     | FOR ID '=' expr TO expr stmt
+     | expr
+     ;
+
+dcls :
+     : dcls dcl
+     ;
+
+dcl  : ID '=' CONST
+     ;
+
+args : 
+     | args expr
+     | expr
+     ;
+
+expr : CONST
+     | STRING
+     | CALL SOP args '$'
+     | ID
+     ;
+
+
+
