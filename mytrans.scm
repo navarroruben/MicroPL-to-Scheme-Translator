@@ -1,11 +1,6 @@
 ;       Ruben Navarro
 ;       date: 04/16/2019
-;       fsuid: RN16G
-;	mytrans.scm - student template for the project
-;	Project 5 
-;	micro-p to scheme converter
-;
-;	(eval (convert "filename") (the-environment))
+;	micro-pl to scheme converter
 
 (define test
 	(lambda (filename)
